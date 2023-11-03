@@ -32,3 +32,4 @@ rails s -b 0.0.0.0
 - Sorting
 - Filter out things
 - Hyperlinks?
+- Drop down to pick maturity rating
