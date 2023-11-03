@@ -21,24 +21,31 @@
   </thead>
 
   <tbody>
-    <% @fics.each do |fic| %>
-      <tr>
-        <td><%= fic.title %></td>
-        <td><%= fic.author %></td>
-        <td><%= fic.summary %></td>
-        <td><%= fic.word_count %></td>
-        <td><%= fic.chapter_count %></td>
-        <td><%= fic.fandom %></td>
-        <td><%= fic.ship %></td>
-        <td><%= fic.maturity_rating %></td>
-        <td><%= fic.date_completed %></td>
-        <td><%= fic.reader_rating %></td>
-        <td><%= fic.reader_notes %></td>
-        <td><%= link_to 'Show', fic %></td>
-        <td><%= link_to 'Edit', edit_fic_path(fic) %></td>
-        <td><%= link_to 'Destroy', fic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <% @fics.each do |fic| %>
+    <tr>
+      <td><%= fic.title %></td>
+      <td><%= fic.author %></td>
+      
+      <!-- Truncate the summary to 100 characters -->
+      <td><%= truncate(fic.summary, length: 100) %></td>
+      
+      <td><%= fic.word_count %></td>
+      <td><%= fic.chapter_count %></td>
+      <td><%= fic.fandom %></td>
+      <td><%= fic.ship %></td>
+      <td><%= fic.maturity_rating %></td>
+      <td><%= fic.date_completed %></td>
+      <td><%= fic.reader_rating %></td>
+      
+      <!-- Truncate the reader notes to 50 characters -->
+      <td><%= truncate(fic.reader_notes, length: 50) %></td>
+      
+      <td><%= link_to 'Show', fic %></td>
+      <td><%= link_to 'Edit', edit_fic_path(fic) %></td>
+      <td><%= link_to 'Destroy', fic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  
   </tbody>
 </table>
 
