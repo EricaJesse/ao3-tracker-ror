@@ -1,60 +1,23 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @fic.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @fic.author %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @fic.summary %>
-</p>
-
-<p>
-  <strong>Word count:</strong>
-  <%= @fic.word_count %>
-</p>
-
-<p>
-  <strong>Chapter count:</strong>
-  <%= @fic.chapter_count %>
-</p>
-
-<p>
-  <strong>Fandom:</strong>
-  <%= @fic.fandom %>
-</p>
-
-<p>
-  <strong>Ship:</strong>
-  <%= @fic.ship %>
-</p>
-
-<p>
-  <strong>Maturity rating:</strong>
-  <%= @fic.maturity_rating %>
-</p>
-
-<p>
-  <strong>Date completed:</strong>
-  <%= @fic.date_completed %>
-</p>
-
-<p>
-  <strong>Reader Rating:</strong>
-  <%= @fic.reader_rating %>
-</p>
-
-<p>
-  <strong>Reader Notes:</strong>
-  <%= @fic.reader_notes %>
-</p>
-
-
-<%= link_to 'Edit', edit_fic_path(@fic) %> |
-<%= link_to 'Back', fics_path %>
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-header">
+      <h1><%= @fic.title %></h1>
+    </div>
+    <div class="card-body">
+      <p><strong>Author:</strong> <%= @fic.author %></p>
+      <p><strong>Summary:</strong> <%= @fic.summary %></p>
+      <p><strong>Word Count:</strong> <%= @fic.word_count %></p>
+      <p><strong>Chapter Count:</strong> <%= @fic.chapter_count %></p>
+      <p><strong>Fandom:</strong> <%= @fic.fandom %></p>
+      <p><strong>Ship:</strong> <%= @fic.ship %></p>
+      <p><strong>Maturity Rating:</strong> <%= @fic.maturity_rating %></p>
+      <p><strong>Date Completed:</strong> <%= @fic.date_completed %></p>
+      <p><strong>Reader Rating:</strong> <%= @fic.reader_rating %></p>
+      <p><strong>Reader Notes:</strong> <%= simple_format(@fic.reader_notes) %></p>
+    </div>
+    <div class="card-footer text-muted">
+      <%= link_to 'Edit', edit_fic_path(@fic), class: "btn btn-outline-secondary" %> |
+      <%= link_to 'Back', fics_path, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+</div>

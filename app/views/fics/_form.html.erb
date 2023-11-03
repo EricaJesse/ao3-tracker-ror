@@ -1,6 +1,7 @@
-<%= form_with(model: fic) do |form| %>
+
+<%= form_with(model: fic, local: true) do |form| %>
   <% if fic.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(fic.errors.count, "error") %> prohibited this fic from being saved:</h2>
 
       <ul>
@@ -11,62 +12,62 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+  <div class="mb-3">
+    <%= form.label :author, class: 'form-label' %>
+    <%= form.text_field :author, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :summary %>
-    <%= form.text_area :summary %>
+  <div class="mb-3">
+    <%= form.label :summary, class: 'form-label' %>
+    <%= form.text_area :summary, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :word_count %>
-    <%= form.text_field :word_count %>
+  <div class="mb-3">
+    <%= form.label :word_count, class: 'form-label' %>
+    <%= form.text_field :word_count, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :chapter_count %>
-    <%= form.number_field :chapter_count %>
+  <div class="mb-3">
+    <%= form.label :chapter_count, class: 'form-label' %>
+    <%= form.number_field :chapter_count, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :fandom %>
-    <%= form.text_field :fandom %>
+  <div class="mb-3">
+    <%= form.label :fandom, class: 'form-label' %>
+    <%= form.text_field :fandom, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :ship %>
-    <%= form.text_field :ship %>
+  <div class="mb-3">
+    <%= form.label :ship, class: 'form-label' %>
+    <%= form.text_field :ship, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :maturity_rating %>
-    <%= form.text_field :maturity_rating %>
+  <div class="mb-3">
+    <%= form.label :maturity_rating, class: 'form-label' %>
+    <%= form.text_field :maturity_rating, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :date_completed %>
-    <%= form.date_select :date_completed %>
+  <div class="mb-3">
+    <%= form.label :date_completed, class: 'form-label' %>
+    <%= form.date_select :date_completed, {}, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :reader_rating %>
-    <%= form.number_field :reader_rating %>
+  <div class="mb-3">
+    <%= form.label :reader_rating, class: 'form-label' %>
+    <%= form.number_field :reader_rating, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :reader_notes %>
-    <%= form.text_area :reader_notes %>
+  <div class="mb-3">
+    <%= form.label :reader_notes, class: 'form-label' %>
+    <%= form.text_area :reader_notes, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
