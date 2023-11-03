@@ -2,9 +2,7 @@
 
 rails s -b 0.0.0.0
 
-## Features to Add
-
-### Current Fields
+## Current Fields
 - Title
 - Author
 - Summary
@@ -17,18 +15,18 @@ rails s -b 0.0.0.0
 - Reader Rating
 - Reader Notes
 
-### Fields to Add
+## Fields to Add
 - Reader tags?
 - whether completed by author
 - maybe in progress/tbr/completed
 
-### Bigger Tasks
+## Bigger Tasks
 
 - Style things better (Bootstrap?)
 - Learn more about databases within RoR
 - User authentication
 
-### Smaller Tasks
+## Smaller Tasks
 
 - Sorting
 - Filter out things
