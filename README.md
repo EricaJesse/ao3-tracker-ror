@@ -33,3 +33,5 @@ rails s -b 0.0.0.0
 - Filter out things
 - Hyperlinks?
 - Drop down to pick maturity rating
+- Expand/collapse details
+  - Which ones need to be seen upfront?
