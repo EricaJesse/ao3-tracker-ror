@@ -56,6 +56,16 @@
     <%= form.date_select :date_completed %>
   </div>
 
+  <div class="field">
+    <%= form.label :reader_rating %>
+    <%= form.number_field :reader_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reader_notes %>
+    <%= form.text_area :reader_notes %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

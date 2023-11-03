@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_03_063638) do
+ActiveRecord::Schema.define(version: 2023_11_03_065319) do
 
   create_table "fic_titles", force: :cascade do |t|
     t.string "title"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2023_11_03_063638) do
     t.date "date_completed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "reader_rating"
+    t.text "reader_notes"
   end
 
 end

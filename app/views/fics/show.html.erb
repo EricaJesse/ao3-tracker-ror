@@ -45,5 +45,16 @@
   <%= @fic.date_completed %>
 </p>
 
+<p>
+  <strong>Reader Rating:</strong>
+  <%= @fic.reader_rating %>
+</p>
+
+<p>
+  <strong>Reader Notes:</strong>
+  <%= @fic.reader_notes %>
+</p>
+
+
 <%= link_to 'Edit', edit_fic_path(@fic) %> |
 <%= link_to 'Back', fics_path %>

@@ -14,6 +14,8 @@
       <th>Ship</th>
       <th>Maturity rating</th>
       <th>Date completed</th>
+      <th>Reader Rating</th>
+      <th>Reader Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +32,8 @@
         <td><%= fic.ship %></td>
         <td><%= fic.maturity_rating %></td>
         <td><%= fic.date_completed %></td>
+        <td><%= fic.reader_rating %></td>
+        <td><%= fic.reader_notes %></td>
         <td><%= link_to 'Show', fic %></td>
         <td><%= link_to 'Edit', edit_fic_path(fic) %></td>
         <td><%= link_to 'Destroy', fic, method: :delete, data: { confirm: 'Are you sure?' } %></td>

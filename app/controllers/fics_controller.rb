@@ -65,6 +65,6 @@ class FicsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def fic_params
-      params.require(:fic).permit(:title, :author, :summary, :word_count, :chapter_count, :fandom, :ship, :maturity_rating, :date_completed)
-    end
+      params.require(:fic).permit(:title, :author, :summary, :word_count, :chapter_count, :fandom, :ship, :maturity_rating, :date_completed, :reader_rating, :reader_notes)
+    end    
 end
