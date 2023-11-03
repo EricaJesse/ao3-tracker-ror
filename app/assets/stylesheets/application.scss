@@ -14,18 +14,39 @@
  *= require_self
  */
 
- .fics-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .fics-table th, .fics-table td {
+ body {
+  background-color: #f8f9fa; // Using the 'body' tag selector instead of '.body' class
+}
+
+.fics-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
-  
-  .fics-table tr:hover {
+
+  tr:hover {
     background-color: #f5f5f5;
   }
-  
+}
+
+.table {
+  margin-top: 20px; // Add some space above the table
+}
+
+.fics-table thead th {
+  background-color: #e9ecef; // A light color for the header background (Bootstrap's default)
+  color: #495057; // Dark color for text (Bootstrap's default)
+}
+
+// Customize buttons for a uniform look with Bootstrap
+a.btn {
+  margin: 0 5px; // Space out buttons a little bit
+}
+
+.btn-primary {
+  color: #fff !important;
+}
