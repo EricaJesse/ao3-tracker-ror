@@ -2,25 +2,34 @@
 
 rails s -b 0.0.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features to Add
 
-Things you may want to cover:
+### Current Fields
+- Title
+- Author
+- Summary
+- Word count
+- Chapter count
+- Fandom
+- Ship
+- Maturity rating
+- Date completed
+- Reader Rating
+- Reader Notes
 
-* Ruby version
+### Fields to Add
+- Reader tags?
+- whether completed by author
+- maybe in progress/tbr/completed
 
-* System dependencies
+### Bigger Tasks
 
-* Configuration
+- Style things better (Bootstrap?)
+- Learn more about databases within RoR
+- User authentication
 
-* Database creation
+### Smaller Tasks
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Sorting
+- Filter out things
+- Hyperlinks?
