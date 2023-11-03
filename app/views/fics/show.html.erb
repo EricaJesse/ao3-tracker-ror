@@ -1,60 +1,62 @@
-<p id="notice"><%= notice %></p>
+<div class="show-custom">
 
-<p>
-  <strong>Title:</strong>
-  <%= @fic.title %>
-</p>
+  <div class="field">
+    <strong>Title:</strong>
+    <div class="value"><%= @fic.title %></div>
+  </div>
 
-<p>
-  <strong>Author:</strong>
-  <%= @fic.author %>
-</p>
+  <div class="field">
+    <strong>Author:</strong>
+    <div class="value"><%= @fic.author %></div>
+  </div>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @fic.summary %>
-</p>
+  <div class="field">
+    <strong>Summary:</strong>
+    <div class="value"><%= @fic.summary %></div>
+  </div>
 
-<p>
-  <strong>Word count:</strong>
-  <%= @fic.word_count %>
-</p>
+  <div class="field">
+    <strong>Word count:</strong>
+    <div class="value"><%= @fic.word_count %></div>
+  </div>
 
-<p>
-  <strong>Chapter count:</strong>
-  <%= @fic.chapter_count %>
-</p>
+  <div class="field">
+    <strong>Chapter count:</strong>
+    <div class="value"><%= @fic.chapter_count %></div>
+  </div>
 
-<p>
-  <strong>Fandom:</strong>
-  <%= @fic.fandom %>
-</p>
+  <div class="field">
+    <strong>Fandom:</strong>
+    <div class="value"><%= @fic.fandom %></div>
+  </div>
 
-<p>
-  <strong>Ship:</strong>
-  <%= @fic.ship %>
-</p>
+  <div class="field">
+    <strong>Ship:</strong>
+    <div class="value"><%= @fic.ship %></div>
+  </div>
 
-<p>
-  <strong>Maturity rating:</strong>
-  <%= @fic.maturity_rating %>
-</p>
+  <div class="field">
+    <strong>Maturity rating:</strong>
+    <div class="value"><%= @fic.maturity_rating %></div>
+  </div>
 
-<p>
-  <strong>Date completed:</strong>
-  <%= @fic.date_completed %>
-</p>
+  <div class="field">
+    <strong>Date completed:</strong>
+    <div class="value"><%= @fic.date_completed %></div>
+  </div>
 
-<p>
-  <strong>Reader Rating:</strong>
-  <%= @fic.reader_rating %>
-</p>
+  <div class="field">
+    <strong>Reader Rating:</strong>
+    <div class="value"><%= @fic.reader_rating %></div>
+  </div>
 
-<p>
-  <strong>Reader Notes:</strong>
-  <%= @fic.reader_notes %>
-</p>
+  <div class="field">
+    <strong>Reader Notes:</strong>
+    <div class="value"><%= @fic.reader_notes %></div>
+  </div>
 
-
-<%= link_to 'Edit', edit_fic_path(@fic) %> |
-<%= link_to 'Back', fics_path %>
+  <div class="actions">
+    <%= link_to 'Edit', edit_fic_path(@fic), class: 'btn btn-primary' %>
+    <%= link_to 'Back', fics_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

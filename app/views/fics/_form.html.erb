@@ -1,6 +1,6 @@
-<%= form_with(model: fic) do |form| %>
+<%= form_with(model: fic, local: true, html: { class: 'form-custom' }) do |form| %>
   <% if fic.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(fic.errors.count, "error") %> prohibited this fic from being saved:</h2>
 
       <ul>
@@ -11,62 +11,62 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :summary %>
-    <%= form.text_area :summary %>
+    <%= form.text_area :summary, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :word_count %>
-    <%= form.text_field :word_count %>
+    <%= form.number_field :word_count, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :chapter_count %>
-    <%= form.number_field :chapter_count %>
+    <%= form.number_field :chapter_count, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :fandom %>
-    <%= form.text_field :fandom %>
+    <%= form.text_field :fandom, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :ship %>
-    <%= form.text_field :ship %>
+    <%= form.text_field :ship, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :maturity_rating %>
-    <%= form.text_field :maturity_rating %>
+    <%= form.select :maturity_rating, ['G', 'T', 'M', 'E'], {}, { class: 'form-control' } %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date_completed %>
-    <%= form.date_select :date_completed %>
+    <%= form.date_select :date_completed, {}, { class: 'form-control', start_year: Time.zone.now.year - 5, end_year: Time.zone.now.year } %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :reader_rating %>
-    <%= form.number_field :reader_rating %>
+    <%= form.number_field :reader_rating, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :reader_notes %>
-    <%= form.text_area :reader_notes %>
+    <%= form.text_area :reader_notes, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
