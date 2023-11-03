@@ -1,0 +1,62 @@
+<%= form_with(model: fic) do |form| %>
+  <% if fic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fic.errors.count, "error") %> prohibited this fic from being saved:</h2>
+
+      <ul>
+        <% fic.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :summary %>
+    <%= form.text_area :summary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :word_count %>
+    <%= form.text_field :word_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chapter_count %>
+    <%= form.number_field :chapter_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fandom %>
+    <%= form.text_field :fandom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ship %>
+    <%= form.text_field :ship %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maturity_rating %>
+    <%= form.text_field :maturity_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_completed %>
+    <%= form.date_select :date_completed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

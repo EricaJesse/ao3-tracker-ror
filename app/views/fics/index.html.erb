@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Summary</th>
+      <th>Word count</th>
+      <th>Chapter count</th>
+      <th>Fandom</th>
+      <th>Ship</th>
+      <th>Maturity rating</th>
+      <th>Date completed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fics.each do |fic| %>
+      <tr>
+        <td><%= fic.title %></td>
+        <td><%= fic.author %></td>
+        <td><%= fic.summary %></td>
+        <td><%= fic.word_count %></td>
+        <td><%= fic.chapter_count %></td>
+        <td><%= fic.fandom %></td>
+        <td><%= fic.ship %></td>
+        <td><%= fic.maturity_rating %></td>
+        <td><%= fic.date_completed %></td>
+        <td><%= link_to 'Show', fic %></td>
+        <td><%= link_to 'Edit', edit_fic_path(fic) %></td>
+        <td><%= link_to 'Destroy', fic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fic', new_fic_path %>

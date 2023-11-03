@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fic.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @fic.author %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @fic.summary %>
+</p>
+
+<p>
+  <strong>Word count:</strong>
+  <%= @fic.word_count %>
+</p>
+
+<p>
+  <strong>Chapter count:</strong>
+  <%= @fic.chapter_count %>
+</p>
+
+<p>
+  <strong>Fandom:</strong>
+  <%= @fic.fandom %>
+</p>
+
+<p>
+  <strong>Ship:</strong>
+  <%= @fic.ship %>
+</p>
+
+<p>
+  <strong>Maturity rating:</strong>
+  <%= @fic.maturity_rating %>
+</p>
+
+<p>
+  <strong>Date completed:</strong>
+  <%= @fic.date_completed %>
+</p>
+
+<%= link_to 'Edit', edit_fic_path(@fic) %> |
+<%= link_to 'Back', fics_path %>
