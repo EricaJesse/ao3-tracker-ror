@@ -19,6 +19,7 @@ rails s -b 0.0.0.0
 - Reader tags?
 - whether completed by author
 - maybe in progress/tbr/completed
+- totals of words, chapters, and fics read
 
 ## Bigger Tasks
 
